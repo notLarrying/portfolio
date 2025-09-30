@@ -21,6 +21,25 @@
     <div class="scroll-hint"></div>
   </section>
 
+  <!-- SNOW PLAYGROUND TRIGGER -->
+  <section id="playgrounds" class="fade">
+    <h2>Playgrounds</h2>
+    <div class="cards">
+      <a class="card snow" href="#/snow">
+        <h3>Snow</h3>
+        <p>Whistler lines & downhill POV.</p>
+      </a>
+      <a class="card run" href="#/run">
+        <h3>Run</h3>
+        <p>Marathons & training trails.</p>
+      </a>
+      <a class="card lens" href="#/lens">
+        <h3>Lens</h3>
+        <p>Film & digital frames.</p>
+      </a>
+    </div>
+  </section>
+
   <!-- STORY -->
   <section id="story" class="fade">
     <div class="story-grid">
@@ -83,25 +102,6 @@
     </article>
   </section>
 
-  <!-- BEYOND WORK -->
-  <section id="beyond" class="fade">
-    <h2>Beyond Spreadsheets</h2>
-    <div class="gallery">
-      <figure>
-        <img src="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQGdASoQABAAQHYJgA" alt="Hong Kong skyline at dawn">
-        <figcaption>Exploring cities through my lens</figcaption>
-      </figure>
-      <figure>
-        <img src="data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAAAwAQGdASoQABAAQHYJgA" alt="Marathon finish">
-        <figcaption>26.2 miles — and counting</figcaption>
-      </figure>
-      <figure>
-        <img src="data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAwAQGdASoQABAAQHYJgA" alt="Flat lay of coffee & film">
-        <figcaption>Film, espresso, repeat</figcaption>
-      </figure>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact" class="fade">
     <h2>Let’s Connect</h2>
@@ -113,7 +113,51 @@
 
   <footer>© <span id="year"></span> Larry Ing</footer>
 
+  <!-- SNOW SUB-APP (injected here when #/snow) -->
+  <div id="snowApp" class="hidden">
+    <nav class="subnav">
+      <a href="#/" class="logo">← Larry</a>
+      <h2>Snow</h2>
+    </nav>
+    <div class="snow-hero">
+      <video autoplay muted loop playsinline>
+        <source src="assets/hero.webm" type="video/webm">
+      </video>
+      <div class="snow-title">
+        <h1>Deep Powder.</h1>
+        <p>Whistler & beyond through my lens.</p>
+      </div>
+    </div>
+
+    <div class="toggle-wrap">
+      <button class="toggle active" data-filter="all">All</button>
+      <button class="toggle" data-filter="ski">Ski</button>
+      <button class="toggle" data-filter="board">Snowboard</button>
+    </div>
+
+    <div class="map">
+      <div class="pin" data-filter="ski" style="top:30%;left:20%">
+        <span>Peak to Creek</span>
+      </div>
+      <div class="pin" data-filter="board" style="top:60%;left:70%">
+        <span>7th Heaven</span>
+      </div>
+      <div class="pin" data-filter="ski" style="top:45%;left:50%">
+        <span>Dave Murray Downhill</span>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <button class="arrow left">&lt;</button>
+      <div class="slides">
+        <img class="slide" data-filter="ski" src="assets/whistler.webp" alt="Peak to Creek">
+        <img class="slide" data-filter="board" src="assets/whistler.webp" alt="7th Heaven">
+        <img class="slide" data-filter="ski" src="assets/whistler.webp" alt="Dave Murray">
+      </div>
+      <button class="arrow right">&gt;</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
-</html>
 </html>
