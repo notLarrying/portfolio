@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
+  <!-- AOS + Typed -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div class="spotlight" id="spotlight"></div>
@@ -14,37 +16,51 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-text">
-      <div class="monogram" id="monogram">LI</div>
-      <h1>Larry Ing</h1>
-      <p class="tagline">Finance strategist. Marathoner. Mountain chaser.</p>
-      <a class="cta" href="#nav">Explore</a>
+      <div class="monogram" id="monogram" data-aos="zoom-in" data-aos-duration="1200">LI</div>
+      <h1 data-aos="fade-down" data-aos-duration="1000">Larry Ing</h1>
+      <p class="tagline typed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></p>
+      <a class="cta" href="#nav" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Explore</a>
     </div>
-    <div class="scroll-hint"></div>
+    <div class="scroll-hint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"></div>
   </section>
 
   <!-- BIG NAV -->
-  <section id="nav" class="fade">
+  <section id="nav" class="fade" data-aos="fade-up" data-aos-duration="800">
     <div class="nav-cards">
-      <a class="nav-card about" href="about.html">About</a>
-      <a class="nav-card work" href="work.html">Work</a>
-      <a class="nav-card edu" href="education.html">Education</a>
-      <a class="nav-card play" href="play.html">Play</a>
+      <a class="nav-card about" href="about.html" data-aos="zoom-in" data-aos-delay="100">About</a>
+      <a class="nav-card work" href="work.html" data-aos="zoom-in" data-aos-delay="200">Work</a>
+      <a class="nav-card edu" href="education.html" data-aos="zoom-in" data-aos-delay="300">Education</a>
+      <a class="nav-card play" href="play.html" data-aos="zoom-in" data-aos-delay="400">Play</a>
     </div>
   </section>
 
   <!-- QUICK SNAPSHOT -->
-  <section id="snapshot" class="fade">
+  <section id="snapshot" class="fade" data-aos="fade-up" data-aos-duration="800">
     <h2>Snapshot</h2>
     <div class="facts">
-      <div>600 B USD assets audited</div>
-      <div>15 countries worked</div>
-      <div>7 marathons finished</div>
-      <div>Deep powder hunter</div>
+      <div data-aos="fade-up" data-aos-delay="100">600 B USD assets audited</div>
+      <div data-aos="fade-up" data-aos-delay="200">15 countries worked</div>
+      <div data-aos="fade-up" data-aos-delay="300">7 marathons finished</div>
+      <div data-aos="fade-up" data-aos-delay="400">Deep powder hunter</div>
     </div>
   </section>
 
-  <footer>© <span id="year"></span> Larry Ing</footer>
+  <footer data-aos="fade">© <span id="year"></span> Larry Ing</footer>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="script.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+    new Typed('.typed', {
+      strings: ['Finance strategist.', 'Marathoner.', 'Mountain chaser.'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  </script>
 </body>
 </html>
