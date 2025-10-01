@@ -163,3 +163,12 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+/* AOS overrides – keep it subtle */
+[data-aos] {
+  transition-timing-function: ease-out;
+}
+/* Typed cursor colour */
+.typed-cursor {
+  color: #003366;
+  font-weight: 300;
+}
