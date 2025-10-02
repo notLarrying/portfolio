@@ -10,38 +10,33 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <div class="spotlight" id="spotlight"></div>
+  <!-- NAV (top-right, translucent) -->
+  <nav class="top-nav">
+    <a href="about.html">About</a>
+    <a href="work.html">Work</a>
+    <a href="education.html">Education</a>
+    <a href="play.html">Play</a>
+  </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-text">
-      <div class="monogram" id="monogram" data-aos="zoom-in" data-aos-duration="1200">LI</div>
-      <h1 data-aos="fade-down" data-aos-duration="1000">Larry Ing</h1>
-      <p class="tagline typed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></p>
-      <a class="cta" href="#nav" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Explore</a>
+  <!-- HERO VIDEO -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="assets/hero-loop.webm" type="video/webm">
+    </video>
+    <div class="hero-overlay">
+      <h1 class="wordmark" data-aos="fade-down" data-aos-duration="1200">Larry Ing</h1>
+      <p class="subline typed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></p>
     </div>
-    <div class="scroll-hint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"></div>
+    <div class="scroll-arrow" data-aos="fade-up" data-aos-delay="600"></div>
   </section>
 
-  <!-- BIG NAV -->
+  <!-- BIG NAV CARDS -->
   <section id="nav" class="fade" data-aos="fade-up" data-aos-duration="800">
     <div class="nav-cards">
       <a class="nav-card about" href="about.html" data-aos="zoom-in" data-aos-delay="100">About</a>
       <a class="nav-card work" href="work.html" data-aos="zoom-in" data-aos-delay="200">Work</a>
       <a class="nav-card edu" href="education.html" data-aos="zoom-in" data-aos-delay="300">Education</a>
       <a class="nav-card play" href="play.html" data-aos="zoom-in" data-aos-delay="400">Play</a>
-    </div>
-  </section>
-
-  <!-- QUICK SNAPSHOT -->
-  <section id="snapshot" class="fade" data-aos="fade-up" data-aos-duration="800">
-    <h2>Snapshot</h2>
-    <div class="facts">
-      <div data-aos="fade-up" data-aos-delay="100">600 B USD assets audited</div>
-      <div data-aos="fade-up" data-aos-delay="200">15 countries worked</div>
-      <div data-aos="fade-up" data-aos-delay="300">7 marathons finished</div>
-      <div data-aos="fade-up" data-aos-delay="400">Deep powder hunter</div>
     </div>
   </section>
 
